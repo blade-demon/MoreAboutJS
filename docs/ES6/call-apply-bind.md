@@ -2,7 +2,8 @@
 
 call() 方法的作用和 apply() 方法类似，只有一个区别，就是call()方法接受的是若干个参数的列表，而apply()方法接受的是一个包含多个参数的数组。
 
-## call() 方法调用一个函数，其具有一个指定的this值和分别地提供的参数
+## call() 
+  调用一个函数，其具有一个指定的this值和分别地提供的参数
 
 ```js
 function Product(name, price) {
@@ -19,7 +20,8 @@ console.log(new Food('cheese', 5).name);
 // expected output: "cheese"
 ```
 
-## apply() 方法调用一个具有给定this值的函数，以及作为一个数组（或类似数组对象）提供的参数
+## apply() 
+  调用一个具有给定this值的函数，以及作为一个数组（或类似数组对象）提供的参数
 
 ```javascript
 var numbers = [5, 6, 2, 3, 7];
@@ -31,8 +33,8 @@ console.log(min);
 // expected output: 2
 ```
 
-## bind()方法创建一个新的函数， 当这个新函数被调用时其this置为提供的值，其参数列表前几项置为创建时指定的参数序列。
-
+## bind()
+  创建一个新的函数， 当这个新函数被调用时其this置为提供的值，其参数列表前几项置为创建时指定的参数序列。
 
 ```js
 var module = {
