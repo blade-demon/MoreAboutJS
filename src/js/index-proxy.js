@@ -3,21 +3,21 @@ import PlaceholderImage from "../img/150x150.png";
 import "../sass/style.scss";
 // import "regenerator-runtime/runtime";
 
-const myImage = (function() {
+const myImage = (function () {
   const imageNode = document.createElement("img");
   imageNode.width = 300;
   imageNode.height = 300;
   document.body.appendChild(imageNode);
   return {
-    setSrc: function(src) {
+    setSrc: function (src) {
       imageNode.src = src;
     }
   };
 })();
 
-const proxyImage = (function() {
+const proxyImage = (function () {
   const image = new Image();
-  image.onload = function() {
+  image.onload = function () {
     // 网络图片加载完成以后再替换本地图片, 模拟延时
     setTimeout(() => {
       myImage.setSrc(this.src);
@@ -25,7 +25,7 @@ const proxyImage = (function() {
   };
 
   return {
-    setSrc: function(src) {
+    setSrc: function (src) {
       // 设置本地图片
       myImage.setSrc(PlaceholderImage);
       // 设置src
