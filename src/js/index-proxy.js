@@ -40,21 +40,52 @@
 //   "https://images.unsplash.com/photo-1537779948435-62e7e105ce9a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8dd9a54faeb6025f7b627b8a2099d212&auto=format&fit=crop&w=1567&q=80"
 // );
 
-// Proxy: 代理就是新类调用老类的接口
-function Person() {}
+// Proxy监听数据的变化
 
-Person.prototype.sayName = () => console.log("Say name, this is Henry");
-Person.prototype.sayAge = () => console.log("Say age, this is my age, 29");
+const arr = [1, 2, 3, 4];
+const list = document.getElementById("list");
+const btn = document.querySelector("btn");
+// 渲染列表
+const Render = {
+  // 初始化
+  init: function(arr) {
+    const fragment = document.createDocumentFragment();
+    for (let i = 0; i < arr.length; i++) {
+      const li = document.createElement("li");
+      li.textContent = arr[i];
+      fragment.appendChild(li);
+    }
+    list.appendChild(fragment);
+  },
+  // 我们只考虑了增加的情况,仅作为示例
+  change: function(val) {
+    const li = document.createElement("li");
+    li.textContent = val;
+    list.appendChild(li);
+  }
+};
 
-function PersonProxy() {
-  this.person = new Person();
-  this.callMethod = functionName => {
-    console.log("before proxy:", functionName);
-    this.person[functionName](); // proxy
-    console.log("after proxy:", functionName);
-  };
-}
+const newArray = new Proxy(arr, {
+  get: function(target, key, receiver) {
+    console.log(`${key}`);
+    return Reflect.get(target, key, receiver);
+  },
+  set: function(target, key, value, receiver) {
+    console.log(target, key, value, receiver);
+    if (key !== "length") {
+      Render.change(value);
+    }
+    return Reflect.set(target, key, value, receiver);
+  }
+});
 
-var pp = new PersonProxy();
-pp.callMethod("sayName"); // 代理调用Person的方法sayName()
-pp.callMethod("sayAge"); // 代理调用Person的方法sayAge()
+// push数字
+document.querySelector("button").addEventListener("click", function() {
+  newArray.push(6);
+});
+
+window.onload = function() {
+  Render.init(arr);
+};
+
+console.log(arr);
