@@ -1,10 +1,10 @@
-function aboutme() {
-  {
-    let a = 1;
-    var b = 2;
-  }
-  // console.log(a);
-  console.log(b);
+console.log(total);
+var total = 0;
+function func(num1, num2) {
+  console.log(total);
+  let total = num1 + num2;
+  console.log(total);
 }
-
-aboutme();
+func(100, 200);
+console.log(total);
+// undefined, 0, 300, 0
