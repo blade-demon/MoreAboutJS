@@ -45,37 +45,37 @@
 // console.log(new Date(), i);
 
 // step3 (Best practice ES7): 0 -> 1 -> 2 -> 3 -> 4 -> 5
-// const sleep = async timeOut =>
-//   new Promise(resolve => {
-//     setTimeout(resolve, timeOut);
-//   });
+const sleep = async timeOut =>
+  new Promise(resolve => {
+    setTimeout(resolve, timeOut);
+  });
 
-// (async () => {
-//   for (var i = 0; i < 5; i++) {
-//     await sleep(1000);
-//     console.log(new Date(), i);
-//   }
-//   await sleep(1000);
-//   console.log(new Date(), i);
-// })();
+(async () => {
+  for (var i = 0; i < 5; i++) {
+    await sleep(1000);
+    console.log(new Date(), i);
+  }
+  await sleep(1000);
+  console.log(new Date(), i);
+})();
 
 // step3-1 (ES6 Promise):  0 -> 1 -> 2 -> 3 -> 4 -> 5
-const tasks = [];
-for (var i = 0; i < 5; i++) {
-  (function(j) {
-    tasks.push(
-      new Promise(resolve => {
-        setTimeout(function() {
-          console.log(new Date(), j);
-          resolve();
-        }, 1000 * j);
-      })
-    );
-  })(i);
-}
+// const tasks = [];
+// for (var i = 0; i < 5; i++) {
+//   (function(j) {
+//     tasks.push(
+//       new Promise(resolve => {
+//         setTimeout(function() {
+//           console.log(new Date(), j);
+//           resolve();
+//         }, 1000 * j);
+//       })
+//     );
+//   })(i);
+// }
 
-Promise.all(tasks).then(function() {
-  setTimeout(() => {
-    console.log(new Date(), i);
-  }, 1000);
-});
+// Promise.all(tasks).then(function() {
+//   setTimeout(() => {
+//     console.log(new Date(), i);
+//   }, 1000);
+// });
