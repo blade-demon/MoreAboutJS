@@ -26,5 +26,11 @@
 
 TODO:
 
-- 配置支持 async-await
 - 理解递归和深度优先，广度优先搜索
+
+## 运行查看
+
+```shell
+  yarn install
+  yarn run serve
+```
