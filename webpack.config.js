@@ -6,7 +6,7 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = {
   mode: "development",
-  entry: "./src/js/practices/call-apply-bind.js",
+  entry: "./src/js/practices/includes.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js"
