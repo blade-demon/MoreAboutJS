@@ -1,4 +1,33 @@
-//
+/*
+  数组去重，并统计元素出现次数: 方法1和方法2都不能去分别数字和字母
+*/
+const array = [1, "2", "3", "a", 2, 4, 5, -1, 2, 1, 1, 1, 6, 4, 3];
+// 方法1:
+function audit1(array) {
+  let obj = {};
+  array.forEach(element => {
+    if (!obj[element]) {
+      obj[element] = 0;
+    }
+    array.indexOf(element) !== -1 ? (obj[element] += 1) : 0;
+  });
+  return obj;
+}
+
+// 方法2:
+function audit2(array) {
+  const mapArray = new Map();
+  array.reduce((prev, current) => {
+    !prev.has(current)
+      ? prev.set(current, 1)
+      : prev.set(current, prev.get(current) + 1);
+    return prev;
+  }, mapArray);
+  return mapArray;
+}
+
+// audit1(array);
+console.log(audit2(array));
 
 // function list(names) {
 //   return names.reduce((prevValue, currentValue, index, array) => {

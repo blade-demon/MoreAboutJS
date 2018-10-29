@@ -14,29 +14,40 @@
 // console.log(Object.prototype.__proto__);
 // console.log(person1.__proto__.__proto__ === Object.prototype);
 
-const dog = {
-  sound: "Woof!",
-  bark() {
-    console.log(this.sound);
+// const dog = {
+//   sound: "Woof!",
+//   bark() {
+//     console.log(this.sound);
+//   }
+// };
+
+// dog.bark();
+
+// const max = {
+//   sound: "RAAARGH!!"
+// };
+
+// max.__proto__ = dog;
+
+// max.bark();
+
+// const catDog = {
+//   sound: "Meowoof"
+// };
+
+// catDog.__proto__ = max;
+
+// catDog.bark();
+
+// console.log(max.bark === catDog.bark);
+
+// 对比原型和构造函数的区别
+const objConstructor = function(x, y) {
+  this.x = x;
+  this.y = y;
+  this.getCoords = () => {
+    return [this.x, this.y];
   }
-};
+}
 
-dog.bark();
 
-const max = {
-  sound: "RAAARGH!!"
-};
-
-max.__proto__ = dog;
-
-max.bark();
-
-const catDog = {
-  sound: "Meowoof"
-};
-
-catDog.__proto__ = max;
-
-catDog.bark();
-
-console.log(max.bark === catDog.bark);
