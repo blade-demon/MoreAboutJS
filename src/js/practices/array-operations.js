@@ -129,3 +129,7 @@ console.log(audit2(array));
 
 // console.log(toCamelCase("the-stealth-warrior"));
 // console.log(toCamelCase("The_Stealth_Warrior"));
+
+// reject
+
+console.log(array.filter(item => parseInt(item) >= 3));
