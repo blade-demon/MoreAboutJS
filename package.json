@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server",
     "build": "webpack",
-    "test-promise": "promises-aplus-tests src/js/index.js"
+    "test-promise": "promises-aplus-tests promise.js"
   },
   "dependencies": {
     "axios": "^0.18.0",
