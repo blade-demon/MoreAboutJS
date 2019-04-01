@@ -6,7 +6,7 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = {
   mode: "development",
-  entry: "./src/js/practices/flatten.js",
+  entry: "./src/js/inheritance.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js"
