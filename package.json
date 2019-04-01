@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "lorem-ipsum": "^2.0.1",
     "node-sass": "^4.9.3",
     "promises-aplus-tests": "^2.1.2",
     "webpack": "^4.20.0",

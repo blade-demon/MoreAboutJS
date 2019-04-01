@@ -6,7 +6,7 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = {
   mode: "development",
-  entry: "./src/js/practices/curry.js",
+  entry: "./src/js/debounce_throttle.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js"

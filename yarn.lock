@@ -1540,6 +1540,11 @@ commander@2.3.0:
   resolved "http://registry.npm.taobao.org/commander/download/commander-2.3.0.tgz?cache=0&other_urls=http%3A%2F%2Fregistry.npm.taobao.org%2Fcommander%2Fdownload%2Fcommander-2.3.0.tgz#fd430e889832ec353b9acd1de217c11cb3eef873"
   integrity sha1-/UMOiJgy7DU7ms0d4hfBHLPu+HM=
 
+commander@^2.17.1:
+  version "2.19.0"
+  resolved "http://registry.npm.taobao.org/commander/download/commander-2.19.0.tgz?cache=0&other_urls=http%3A%2F%2Fregistry.npm.taobao.org%2Fcommander%2Fdownload%2Fcommander-2.19.0.tgz#f6198aa84e5b83c46054b94ddedbfed5ee9ff12a"
+  integrity sha1-9hmKqE5bg8RgVLlN3tv+1e6f8So=
+
 commander@~2.13.0:
   version "2.13.0"
   resolved "http://registry.npm.taobao.org/commander/download/commander-2.13.0.tgz#6964bca67685df7c1f1430c584f07d7597885b9c"
@@ -3781,6 +3786,13 @@ loose-envify@^1.0.0:
   integrity sha1-ce5R+nvkyuwaY4OffmgtgTLTDK8=
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
+
+lorem-ipsum@^2.0.1:
+  version "2.0.1"
+  resolved "http://registry.npm.taobao.org/lorem-ipsum/download/lorem-ipsum-2.0.1.tgz#de6690f2184effe6059fa88385bc6b6ec83cfed6"
+  integrity sha1-3maQ8hhO/+YFn6iDhbxrbsg8/tY=
+  dependencies:
+    commander "^2.17.1"
 
 loud-rejection@^1.0.0:
   version "1.6.0"
