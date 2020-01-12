@@ -24,11 +24,13 @@ function Customer(firstName, lastName, phone, membership) {
 Customer.prototype = Object.create(Person.prototype);
 
 // Make Customer.prototype return Customer()
-// Customer.prototype.constructor = Customer;
-
+Customer.prototype.constructor = Customer;
+//
 // create customer
 const customer1 = new Customer("Tom", "Smith", "18616345128", "Standard");
 console.log(customer1);
+
+console.log(customer1.greeting());
 
 Customer.prototype.greeting = function() {
 	return `Hello there ${this.firstName} ${this.lastName} welcome to our Company!`;
