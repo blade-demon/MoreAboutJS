@@ -1,3 +1,4 @@
+// Person constructor
 function Person(firstName, lastName) {
 	this.firstName = firstName;
 	this.lastName = lastName;
@@ -10,6 +11,7 @@ Person.prototype.greeting = function() {
 
 const person1 = new Person("John", "Haris");
 
+// Customer constructor
 function Customer(firstName, lastName, phone, membership) {
 	Person.call(this, firstName, lastName);
 
