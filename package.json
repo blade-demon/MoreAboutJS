@@ -14,7 +14,7 @@
     "node-sass": "^4.9.3",
     "promises-aplus-tests": "^2.1.2",
     "webpack": "^4.20.0",
-    "webpack-dev-server": "^3.1.9"
+    "webpack-dev-server": "^3.1.11"
   },
   "devDependencies": {
     "@babel/core": "^7.1.0",
